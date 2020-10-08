@@ -1,0 +1,9 @@
+<form action="/shelters" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>Please enter the following information to submit a new shelter:</p>
+  <br>
+  <p><strong>Shelter name:<strong></p>
+  <input type='text' name='shelter[name]'/><br/>
+  <textarea name='shelter[description]'></textarea><br/>
+  <input type='submit'/>
+</form>

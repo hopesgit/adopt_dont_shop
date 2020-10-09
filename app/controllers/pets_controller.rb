@@ -1,5 +1,8 @@
 class PetsController < ApplicationController
   def index
-    @pets = ['Pet1', 'Pet2', 'Pet3']
+    @pets = Pet.all
+  end
+
+  def new
   end
 end

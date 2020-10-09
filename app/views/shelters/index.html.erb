@@ -4,4 +4,5 @@
   <h3><%= shelter.name %></h3>
   <p><%= shelter.address %></p>
   <p><%= shelter.city %>, <%= shelter.state %> <%= shelter.zip %></p>
+  <p><%= link_to "More information", "/shelters/#{shelter.id}" %></p>
 <% end %>

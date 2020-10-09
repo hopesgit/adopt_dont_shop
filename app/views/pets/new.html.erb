@@ -1,0 +1,37 @@
+<h1>New Pet</h1>
+
+<form action="/pets" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <p>Please enter the following information to submit a new pet:</p><br>
+
+  <label for="name">Pet Name:</label><br>
+  <input type='text' id="name" name='pet[name]'/><br><br>
+
+  <label for="image">Pet Image (please enter the URL of the picture you would like to share):</label><br>
+  <input type='text' id="image" name='pet[image]'/><br><br>
+
+  <label for="desc">Pet Description:</label><br>
+  <textarea name='pet[description]' id="desc" rows="2" cols="30"></textarea><br><br>
+
+  <label for="age">Pet Age:</label><br>
+  <input type='number' id="age" name='pet[age]' value=0 /><br><br>
+
+  <label for="sex">Pet Sex:</label><br>
+  <form id="sex"><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+  </form><br><br>
+
+  <label for="status">Pet Adoption Status:</label><br>
+  <form id="status"><br>
+    <input type="radio" id="unadopted" name="status" value="Needs a home">
+    <label for="unadopted">Needs a home</label><br>
+    <input type="radio" id="adopted" name="status" value="Adopted">
+    <label for="adopted">Adopted</label>
+  </form><br><br>
+
+  <input type='submit'/>
+</form>

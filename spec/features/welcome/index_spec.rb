@@ -8,7 +8,6 @@ describe "As a user" do
       expect(page).to have_content("Welcome to Adopt, Don't Shop!")
       expect(page).to have_content("Shelters")
       expect(page).to have_content("Shelter Index")
-      expect(page).to have_content("New Shelter")
       expect(page).to have_content("Pets")
       expect(page).to have_content("Pet Index")
       expect(page).to have_content("New Pet")
@@ -22,14 +21,6 @@ describe "As a user" do
       expect(page).to have_link("Shelter Index")
       click_link("Shelter Index")
       expect(page).to have_content("All Shelters")
-    end
-
-    it "New Shelter" do
-      visit("/")
-
-      expect(page).to have_link("New Shelter")
-      click_link('New Shelter')
-      expect(page).to have_content("ZIP Code:")
     end
 
     it "Pet Index" do

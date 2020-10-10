@@ -12,9 +12,25 @@ describe "As a user" do
       click_link("More information")
 
       expect(page).to have_link("Shelter Index")
-      expect(page).to have_content("ASPCA")
-      expect(page).to have_content("123 Example Ln")
-      expect(page).to have_content("Denver, CO 80010")
+      expect(page).to have_content("#{shelter1.name}")
+      expect(page).to have_content("#{shelter1.address}")
+      expect(page).to have_content("#{shelter1.city}, #{shelter1.state} #{shelter1.zip}")
+    end
+
+    it "has these links" do
+      Shelter.create({
+                      name: "ASPCA",
+                      address: "123 Example Ln",
+                      city: "Denver",
+                      state: "CO",
+                      zip: "80010"
+                      })
+      visit("/shelters")
+      click_link("More information")
+
+      expect(page).to have_link("Shelter Index")
+      expect(page).to have_button("Edit")
+      expect(page).to have_button("Delete")
     end
   end
 end

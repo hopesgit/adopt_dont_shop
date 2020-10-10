@@ -18,16 +18,17 @@ describe "As a user" do
     end
 
     it "has these links" do
-      Shelter.create({
-                      name: "ASPCA",
-                      address: "123 Example Ln",
-                      city: "Denver",
-                      state: "CO",
-                      zip: "80010"
-                      })
+      shelter1 = Shelter.create({
+                                name: "ASPCA",
+                                address: "123 Example Ln",
+                                city: "Denver",
+                                state: "CO",
+                                zip: "80010"
+                                })
       visit("/shelters")
       click_link("More information")
 
+      expect(current_path).to eq("/shelters/#{shelter1.id}")
       expect(page).to have_link("Shelter Index")
       expect(page).to have_button("Edit")
       expect(page).to have_button("Delete")

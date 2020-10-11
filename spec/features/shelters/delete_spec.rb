@@ -8,7 +8,7 @@ describe "As a user" do
       visit("/shelters")
       click_on("More information")
       expect(page).to have_content("#{shelter1.name}")
-      click_on("Delete")
+      click_on("Delete Shelter")
       expect(current_path).to eq("/shelters")
       # expect(page).to have_content("#{shelter2.name}")
       expect(page).to have_no_content

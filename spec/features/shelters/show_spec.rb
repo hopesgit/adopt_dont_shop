@@ -30,7 +30,7 @@ describe "As a user" do
 
       expect(current_path).to eq("/shelters/#{shelter1.id}")
       expect(page).to have_link("Shelter Index")
-      expect(page).to have_button("Edit")
+      expect(page).to have_link("Edit")
       expect(page).to have_button("Delete")
     end
   end

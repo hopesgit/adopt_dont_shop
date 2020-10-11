@@ -3,8 +3,7 @@
 <% @pets.each do |pet| -%>
   <h3><%= pet.name %></h3>
   <%= img_tag "#{pet.image}" %>
-  <%= pet.description %>
   <%= "Sex: #{pet.sex}" %>
   <%= "Age: #{pet.age}" %>
-  
+  <%= "Shelter: #{Shelter.find(pet.shelter_id).name}" %>
 <% end %>

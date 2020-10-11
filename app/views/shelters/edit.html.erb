@@ -1,0 +1,13 @@
+<%= form_tag "/shelters/#{@shelter.id}", method: :patch do %>
+  <%= label_tag :name, value="Shelter Name (ex: Dumb Friends League):" %><br>
+  <%= text_field_tag :name %><br><br>
+  <%= label_tag :address, value="Street Address:" %><br>
+  <%= text_field_tag :address %><br><br>
+  <%= label_tag :city, value="City:" %><br>
+  <%= text_field_tag :city %><br><br>
+  <%= label_tag :state, value="State:" %><br>
+  <%= text_field_tag :state %><br><br>
+  <%= label_tag :zip, value="ZIP Code:" %><br>
+  <%= text_field_tag :zip %><br><br>
+  <%= submit_tag "Submit" %>
+<% end %>

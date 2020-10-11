@@ -13,7 +13,7 @@ describe "As a user" do
 
       visit("/shelters/#{shelter1.id}")
 
-      expect(page).to have_button("Edit")
+      expect(page).to have_link("Edit")
       click_on("Edit")
       expect(current_path).to eq("/shelters/#{shelter1.id}/edit")
     end
@@ -30,8 +30,6 @@ describe "As a user" do
         })
 
       visit("shelters/#{shelter1.id}/edit")
-
-      expect(page).to have_content("Edit #{shelter.name}")
 
       fill_in("name", :with => "Dumb Friends League")
       fill_in("address", :with => "1111 Test Dr")

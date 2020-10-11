@@ -11,7 +11,7 @@ describe "As a user" do
       click_on("Delete")
       expect(current_path).to eq("/shelters")
       # expect(page).to have_content("#{shelter2.name}")
-      expect(page).to not_have_content("#{shelter1.name}")
+      expect(page).to have_no_content
     end
   end
 end

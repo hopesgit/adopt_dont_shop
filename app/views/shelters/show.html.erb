@@ -1,0 +1,9 @@
+<%= link_to "Shelter Index", "/shelters" %>
+
+<h1><%= @shelter.name %></h1>
+
+<p><%= @shelter.address %></p>
+<p><%= @shelter.city %>, <%= @shelter.state %> <%= @shelter.zip %></p>
+<%= button_to "Edit", "/shelters/#{@shelter.id}/edit" %>
+<%= button_to "Delete", method: :delete %>
+<!-- Pets index link-->

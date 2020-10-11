@@ -10,4 +10,21 @@ describe "As a user" do
       expect(current_path).to eq("/pets")
     end
   end
+
+  describe "from the pets index" do
+    it "shows pets" do
+      shelter1 = Shelter.create({
+        name: "Bark Bin",
+        address: "4656 Nature Way",
+        city: "McAllen",
+        state: "TX",
+        zip: "75319"
+        })
+      pet1 = Pet.create(name: "Austin", age: 1, shelter_id: "#{shelter1.id}", sex: "Male", image: "https://live.staticflickr.com/2593/4146369224_c08b539596_b.jpg", adoptability: "Needs a home")
+
+      visit("/pets")
+
+      expect(page).to have_content("#{pet1.name}")
+    end
+  end
 end

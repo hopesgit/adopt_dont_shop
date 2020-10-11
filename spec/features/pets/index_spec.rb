@@ -20,7 +20,7 @@ describe "As a user" do
         state: "TX",
         zip: "75319"
         })
-      pet1 = Pet.create(name: "Austin", age: 1, shelter_id: "#{shelter1.id}", sex: "Male", image: "https://live.staticflickr.com/2593/4146369224_c08b539596_b.jpg", adoptability: "Needs a home")
+      pet1 = Pet.create(name: "Austin", age: 1, shelter_id: "#{shelter1.id}", sex: "Male", image: "https://live.staticflickr.com/2593/4146369224_c08b539596_b.jpg", adoptability: "Needs a home", description: "Hi there! I'm Austin and I've been barking up the wrong tree! Would you please take me home? I've had all my shots and am ready to bust out of this joint!")
 
       visit("/pets")
 

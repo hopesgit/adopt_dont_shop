@@ -13,7 +13,8 @@ class PetsController < ApplicationController
       image: params[:image],
       age: params[:age],
       sex: params[:sex],
-      adoptability: params[:adoptability]
+      adoptability: params[:adoptability],
+      shelter_id: params[:shelter_id]
       })
 
     pet.save

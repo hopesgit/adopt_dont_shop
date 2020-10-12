@@ -10,7 +10,6 @@ describe "As a user" do
       expect(page).to have_content("Shelter Index")
       expect(page).to have_content("Pets")
       expect(page).to have_content("Pet Index")
-      expect(page).to have_content("New Pet")
     end
   end
 
@@ -29,14 +28,6 @@ describe "As a user" do
       expect(page).to have_link("Pet Index")
       click_link("Pet Index")
       expect(page).to have_content("All Pets")
-    end
-
-    it "New Pet" do
-      visit("/")
-
-      expect(page).to have_link("New Pet")
-      click_link("New Pet")
-      expect(page).to have_content("Pet Name:")
     end
   end
 end

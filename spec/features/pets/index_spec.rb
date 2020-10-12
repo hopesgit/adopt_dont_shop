@@ -12,6 +12,14 @@ describe "As a user" do
   end
 
   describe "from the pets index" do
+    it "has this content" do
+      visit("/pets")
+
+      expect(page).to have_link("New Pet")
+      click_link("New Pet")
+      expect(current_path).to eq("/pets/new")
+    end
+
     it "shows pets" do
       shelter1 = Shelter.create({
         name: "Bark Bin",

@@ -5,12 +5,16 @@
 
   <%= label_tag :name, value="Pet Name:" %><br>
   <%= text_field_tag :name, value="Precious" %> <br><br>
+
   <%= label_tag :image, value="Pet Image:" %><br>
   <%= text_field_tag :image, value="Put direct picture URL here!" %><br><br>
+
   <%= label_tag :description, value="Pet Description:" %><br>
   <%= text_area_tag :description, value="Describe the animal here!", rows: 2, cols: 30 %><br><br>
+
   <%= label_tag :age, value="Pet Age:" %><br>
   <%= number_field_tag :age, value=0 %><br><br>
+
   <%= label_tag :sex, value="Pet Sex:" %><br>
   <%= radio_button_tag( :sex, "Male") %>
   <%= label_tag( :sex_male, "Male") %><br>

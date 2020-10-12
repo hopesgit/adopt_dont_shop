@@ -1,5 +1,11 @@
 <h1>All Pets</h1>
+<br>
+<%= link_to "New Pet", "/pets/new" %>
 
 <% @pets.each do |pet| -%>
-  <h3><%= pet %></h3>
+  <h3><%= pet.name %></h3>
+  <%= image_tag "#{pet.image}" %>
+  <%= "Sex: #{pet.sex}" %>
+  <%= "Age: #{pet.age}" %>
+  <%= "Shelter: #{Shelter.find(pet.shelter_id).name}" %>
 <% end %>

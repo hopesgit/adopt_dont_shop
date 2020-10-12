@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   # Pets
   get '/pets', to: 'pets#index'
   get '/pets/new', to: 'pets#new'
+  post '/pets', to: 'pets#create'
 end
